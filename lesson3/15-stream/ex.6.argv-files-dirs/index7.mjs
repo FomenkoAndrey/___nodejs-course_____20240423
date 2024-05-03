@@ -15,3 +15,4 @@ if (fs.existsSync(destinationDir)) {
 }
 
 fs.mkdirSync(destinationDir)
+console.log('Destination directory was created')

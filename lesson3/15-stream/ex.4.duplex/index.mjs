@@ -1,13 +1,13 @@
 import { Duplex } from 'stream'
 
-const inoutStream = new Duplex({
+const inputStream = new Duplex({
   write(chunk, encoding, callback) {
     console.log(chunk.toString())
     callback()
   },
 
   read(size) {
-    if (this.currentCharCode > 90) {
+    if (this.currentCharCode > 90) { // Z is 90
       this.push(null)
 
       return
@@ -16,6 +16,6 @@ const inoutStream = new Duplex({
   }
 })
 
-inoutStream.currentCharCode = 65
+inputStream.currentCharCode = 65 // 65 is A
 
-inoutStream.pipe(process.stdout)
+inputStream.pipe(process.stdout)
