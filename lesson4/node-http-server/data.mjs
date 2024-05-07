@@ -84,5 +84,4 @@ const todos = [
   }
 ]
 
-
 export { rootHtmlTemplate, notFoundHtmlTemplate, todos, formTemplate, generateTodosTemplate }
